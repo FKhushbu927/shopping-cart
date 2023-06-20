@@ -12,8 +12,9 @@
 <body>
     <section>
         <div class="container">
-              <h2>My shopping cart</h2>
+            
               <div class="cart">
+                <h2>My shopping cart</h2>
                 <div class="col-md-12 col-lg-10 mx-auto">
                     <div class="cart-item">
                         <div class="row">
@@ -53,13 +54,44 @@
                             </div>
                         </div>
                     </div>
-                    <div class="cart-item"></div>
-                    <div class="cart-item"></div>
+                    <div class="cart-item">
+                        <div class="row">
+                            <div class="col-md-7 center-item">
+                                   <img src="images/image-headset.jpg" alt="">
+                                <h5>iPhone 11 128GB Black</h5>
+                            </div>
+                            <div class="col-md-5 center-item">
+                                 <div class="input-group number spinner">
+                                    <button id="btn-headset-minus" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                                    <input id="headset-number-field" type="number" min="0" class="form-control text-center" value="1">
+                                   <button id="btn-headset-plus" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                                 </div>
+                                 <h5>$<span id="headset-total">80</span></h5>
+                                 <!-- <img src="images/remove.png" alt="" class="remove-item">  -->
+                                 <button class="cross"><i class="fa-sharp fa-solid fa-xmark"></i></button> 
+                                 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                            <div class="total-value">
+                                <div class="valueTitle">
+                                    <h3>Subtotal:</h3>
+                                    <h3>Tax:</h3>
+                                    <h3>Total:</h3>
+                              </div>
+                              <div>
+                                      <h3>$<span id="sub-total">1200</span></h3>
+                                      <h3>$<span id="tax-amount">00</span></h3>
+                                      <h3>$<span id="final-total">00</span></h3>
+                              </div>
+                            </div>
+                    </div>
                     <div class="col-md-12 pt-4 pb-4">
                         <button type="button" class="btn btn-success check-out">Check Out</button>
                      </div>
                 </div>
-              </div><!--cart-->>
+              </div><!--cart-->
 
         </div><!--container-->
     </section>
