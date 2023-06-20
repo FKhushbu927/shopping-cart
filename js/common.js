@@ -9,13 +9,24 @@ function getTextElementById(elementId){
   
 }
 
+function setTextElementValueById(elementId, value){
+    const subTotalElement = document.getElementById(elementId);
+    subTotalElement.innerText = value;
+}
+
 function calculateSubTotal(){
     const currentPhoneTotal = getTextElementById('phone-total');
 
     const currentCaseTotal = getTextElementById('case-total');
     const currentHeadsetTotal = getTextElementById('headset-total');
     const currentSubTotal =  currentPhoneTotal + currentCaseTotal + currentHeadsetTotal;
- 
-    const subTotalElement = document.getElementById('sub-total');
-    subTotalElement.innerText = currentSubTotal;
+    setTextElementValueById('sub-total', currentSubTotal)
+   
+     //calculate tax
+
+     const taxAmountString = currentSubTotal * 0.1.toFixed(2);
+     const taxAmount = parseFloat(taxAmountString);
+     setTextElementValueById('tax-amount', taxAmount);
+
+
 }
